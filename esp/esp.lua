@@ -1,4 +1,5 @@
-if config.esp.chams then
+local beans = true
+if beans then
 while not game:IsLoaded() do
    wait()
 end
