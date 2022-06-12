@@ -16,7 +16,7 @@ local rs = game:GetService("RunService")
 local camera = workspace.CurrentCamera
 
 
-while true do
+while config.esp.chams do
  wait(100)
    f_team = plr.Team
    for i,v in next, game:GetService("Teams"):GetChildren() do
@@ -35,7 +35,7 @@ local function geteplrlist()
    end
 end
 
-while true do
+while config.esp.chams do
  wait(100)
 e_plrlist = geteplrlist()
 end
@@ -99,7 +99,7 @@ end
 
 setfpscap(10000)
 
-while true do
+while config.esp.chams do
    for i,v in next, e_plrlist:GetChildren() do
        create_esp(v)
    end
