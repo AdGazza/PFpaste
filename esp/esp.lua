@@ -1,4 +1,3 @@
-local beans = true
 while not game:IsLoaded() do
    wait()
 end
@@ -17,7 +16,7 @@ local rs = game:GetService("RunService")
 local camera = workspace.CurrentCamera
 
 
-while beans do
+while true do
  wait(100)
    f_team = plr.Team
    for i,v in next, game:GetService("Teams"):GetChildren() do
@@ -36,7 +35,7 @@ local function geteplrlist()
    end
 end
 
-while beans do
+while true do
  wait(100)
 e_plrlist = geteplrlist()
 end
@@ -100,7 +99,7 @@ end
 
 setfpscap(10000)
 
-while beans do
+while true do
    for i,v in next, e_plrlist:GetChildren() do
        create_esp(v)
    end
