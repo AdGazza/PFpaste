@@ -15,7 +15,7 @@ local e_plrlist
 local rs = game:GetService("RunService")
 local camera = workspace.CurrentCamera
 
-if config.esp.chams then
+--if config.esp.chams then
 rs.Stepped:Connect(function()
    f_team = plr.Team
    for i,v in next, game:GetService("Teams"):GetChildren() do
@@ -102,4 +102,4 @@ rs.RenderStepped:Connect(function()
        create_esp(v)
    end
 end)
-end
+--end
