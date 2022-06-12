@@ -1,3 +1,4 @@
+if config.esp.chams then
 while not game:IsLoaded() do
    wait()
 end
@@ -15,8 +16,9 @@ local e_plrlist
 local rs = game:GetService("RunService")
 local camera = workspace.CurrentCamera
 
---if config.esp.chams then
-rs.Stepped:Connect(function()
+
+while true do
+ wait(100)
    f_team = plr.Team
    for i,v in next, game:GetService("Teams"):GetChildren() do
        if v ~= f_team then
@@ -24,7 +26,7 @@ rs.Stepped:Connect(function()
            break
        end
    end
-end)
+end
 
 local function geteplrlist()
    for i,v in next, o_plrs:GetChildren() do
@@ -34,9 +36,10 @@ local function geteplrlist()
    end
 end
 
-rs.Stepped:Connect(function()
+while true do
+ wait(100)
 e_plrlist = geteplrlist()
-end)
+end
 
 local function check_for_esp(c_model)
    returnv = false
@@ -102,4 +105,4 @@ rs.RenderStepped:Connect(function()
        create_esp(v)
    end
 end)
---end
+end
