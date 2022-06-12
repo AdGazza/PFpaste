@@ -1,13 +1,20 @@
 local window = library:CreateWindow(
     {
-        WindowName = "purple haze - phantom forces",
-        Color = Color3.fromRGB(179, 51, 196),
+        WindowName = "monkeypaste",
+        Color = Color3.fromRGB(217, 255, 0),
     },
     game.CoreGui
 )
 
+local esp_tab = window:CreateTab("esp")
 local aimbot_tab = window:CreateTab("aimbot")
 local character_tab = window:CreateTab("character")
+
+local chams_sector = esp_tab:CreateSection("chams")
+chams_sector:CreateToggle("enabled", false, function(state)
+        config.esp.chams = state
+    end)
+
 do
     local fov_circle = Drawing.new("Circle")
     fov_circle.Thickness = 1

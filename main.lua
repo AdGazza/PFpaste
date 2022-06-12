@@ -17,6 +17,8 @@ import('/target/get_closest.lua')
 
 import('/aiming/silent_aim.lua')
 
+import('/esp/esp.lua')
+
 import('/character/set_jump_power.lua')
 import('/character/set_speed.lua')
 import('/character/fake_lag.lua')

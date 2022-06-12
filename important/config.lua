@@ -6,6 +6,9 @@ getgenv().config = {
         field_of_view_range = 180,
         target_part = "torso"
     },
+    esp = {
+        chams = false,
+    },
     character = {
         walkspeed = false,
         jumppower = false,
